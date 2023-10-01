@@ -1,13 +1,95 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+.note{
+  background-color: rgb(77, 77, 37);
+  margin: 8px 10px;
+  color: white;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.note-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.notes-list{
+ 
+  display: grid;
+  grid-gap: 1rem;
+  /* grid-template-columns: repeat(4,250px); this is used for making grid box model */
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  /* grid-template-columns: repeat(3,1fr); */
+  /* this above code is very useful for making the web page responsive */
+}
+.App{
+  padding:10px;
+  max-width: 960px;
+  
+}
+.note.new {
+  background-color: rgb(31, 236, 236);
+  width: 20rem;
+  align-items: center;
+}
+.note.new textarea{
+    width: -webkit-fill-available;
+    background-color: rgb(182, 245, 245);
+    border: none;
+    outline: none;
+
+}
+.note.new textarea:focus{
+    width: -webkit-fill-available;
+    background-color: rgb(230, 244, 240);
+   /* border: 1px solid white; */
+   outline: none;
+}
+.notes-footer button{
+  margin-left: 20 px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    background: grey;
+    height: 51px;
+    align-items: center;
+    border-radius: 10px;
+    width: 98%;
+    margin: 4px 14px;
+}
+.search input{
+  width: 100%;
+  height: -webkit-fill-available;
+  border: solid black 1px;
+  border-radius: 10px;
+  padding: 5px;
+}
+.search input:focus{
+  border-color: wheat;
+  border-radius: 10px;
+  outline: none;
+}
+.search-icons{
+  margin: 0px 5px;
+}
+/* .dark-color{
+  color: white;
+  background-color: black;
+  margin: 0px;
+  padding: 0px;
+} */
+.header{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  align-items: center;
+}
+.header button{
+  height: 50px;
 }
